@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ news.title }}</h1>
+
+<p>
+	{{ news.text|linebreaks }}
+</p>
+
+<p>
+	{{ news.creation_date}}
+</p>
+<a href="{% url 'news_list' %}">Назад</a>
+{% endblock content %}

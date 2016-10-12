@@ -1,0 +1,260 @@
+body {
+	background: #fcfcfc;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: large;
+}
+
+.wrap {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#hide-slider {
+	display: block;
+}
+
+.logo-top {
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+}
+
+.college-name {
+	color: #008e42;
+	margin-top: 3%;
+}
+
+.language {
+	margin-top: 10%;
+	margin-bottom: 3.7%;
+}
+
+.language a {
+	color: #008e42;
+	font-size: 1.2em;
+}
+
+.language a:hover {
+	color: #005427;
+}
+
+
+.flag-icon-background {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.flag-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.33333333em;
+  line-height: 1em;
+}
+.flag-icon:before {
+  content: "\00a0";
+}
+.flag-icon.flag-icon-squared {
+  width: 1em;
+}
+
+.flag-icon-ru {
+  background-image: url(flags/ru.svg);
+}
+
+.flag-icon-tj {
+  background-image: url(flags/tj.svg);
+}
+
+.flag-icon-gb-eng {
+  background-image: url(flags/gb-eng.svg);
+}
+
+
+
+#search-field {
+	/*margin-top: 17%;*/
+}
+
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	/*border-right:0;*/ 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+input.form-control:focus {
+	border-color: #008e42; 
+}
+
+/*container1 - Header*/
+.container1{
+	background-color: #ddeee4;
+}
+.container1 .col-lg-8 {
+	height: 36.67%;
+	color: #00b359;
+}
+.container1 .col-lg-2 {
+	height: 36.67%;
+	color: #00b359;
+}
+.lang {
+	float: right;
+	margin-top: 40%;
+}
+.container1 .col-lg-2 > span {
+	float: left;
+}
+
+.container1 .col-lg-8 > h1 {
+	text-align: center; 
+}
+
+.glyphicon > .contact {
+	font-family: 'Ubuntu Condensed', sans-serif;
+}
+/*Navigation Menu*/
+/*nav.navbar.navbar-inverse {
+	background-color: #008e42;
+}*/
+nav.navbar.navbar-inverse {
+	width: 100%;
+	float: center;
+	margin-top: 0%;
+	height: 100%;
+	text-align: center;
+	background-color: #008e42;
+	border:none;
+}
+
+ul.nav.navbar-nav {
+	display: inline-block;
+  	float: none;
+  	vertical-align: top;
+}
+/*.navbar .nav {
+  line-height: 100%;
+  background-color: transparent;
+}*/
+
+/*.navbar .nav a {
+  display: inline-block;
+  line-height: 298%;
+  padding-top: 0;
+  padding-bottom: 0;
+}*/
+.nav > li.dropdown.open {
+	/*float: none;*/
+	display: inline-block;
+}
+
+.navbar-inverse .navbar-nav>li>a.dropdown-toggle {
+	color: white;
+}
+
+/*.navbar-inverse .navbar-nav>.open>a.dropdown-toggle {
+	background-color: rgba(255,255,255,0);
+}
+*/
+
+
+/*.navbar .nav > li > a {
+    float: none;
+    line-height: 168%;
+    padding: 9px 10px 11px;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color:  #ddd;
+}*/
+.navbar-inverse .navbar-nav>.open>a.dropdown-toggle, .navbar-inverse .navbar-nav>.open>a.dropdown-toggle:focus, .navbar-inverse .navbar-nav>.open>a.dropdown-toggle:hover {
+    color: #fff;
+    background-color: rgba(255,255,255,0.1);
+}
+/*.dropdown-menu {
+	background-color: #008e42;
+}*/
+/*.dropdown-menu >li > a {
+ float: none;
+ color: #ddd;
+}*/
+
+@media(max-width: 767px) {
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+		color: white;
+	}
+}
+
+
+/*slider*/
+.container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin:10px auto 0;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 100%; 
+    height: 100%;
+}
+/*container2 News/small menu/column*/
+.container2 {
+	margin: 30px 30px 30px 30px;
+}
+.col-lg-4 li a {
+	display: block;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	background: #edf6f1;
+	margin: 1px;
+	padding-left: 15px;
+	cursor: pointer;
+	color: #00b359 ;
+}
+.column {
+	margin: 30px 30px 30px 30px;
+	background-color: #edf6f1;
+	border:1px solid;
+	border-color:#00b359; 
+}
+.column p {
+	color: #00b359;
+	margin: 10px 10px 10px 10px;
+}
+.column h3 {
+	color: #00b359;
+}
+/*footer*/
+ footer {
+	background-color: #008e42;
+	/*padding-bottom: 1px;*/
+	/*padding: 1rem;*/
+	position: relative;
+    max-height: 25%;
+    margin: 0 auto;
+    color: #ddd;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+footer li a {
+	color: #ddd;
+}
+footer li:hover a{
+	color: #ddd;
+}
+/*other*/
+@media screen and (max-width: 600px) {
+  #no {
+    visibility: hidden;
+    display: none;
+  }
+}
