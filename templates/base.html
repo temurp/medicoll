@@ -41,15 +41,17 @@
 					<a href="#">РУССКИЙ</a>
 				</div>
 
-				<div id="search-field"> 
+				<div id="search-field">
+				<form action="."> 
 	                <div class="input-group stylish-input-group">
-	                    <input type="text" class="form-control"  placeholder="Найти" >
+	                    <input type="text" name="query" class="form-control" placeholder="Найти" value="{{query|default:''}}">
 	                    <span class="input-group-addon">
 	                        <button type="submit">
 	                            <span class="glyphicon glyphicon-search"></span>
 	                        </button>  
 	                    </span>
 	                </div>
+            	</form>
             	</div>
 			</div>
 

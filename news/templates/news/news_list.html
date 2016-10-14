@@ -5,7 +5,7 @@
 <h1>Новости</h1>
 
 {% for news in news_list %}
-<h3><a href="{% url 'news_detail' news.id %}" style="color: #333;">{{ news.title }}</a></h3>
+<h3><a href="{% url 'news_detail' news.id %}" style="color: #333;" name="exactline">{{ news.title }}</a></h3>
 <p>
 	{{ news.text|truncatewords:33 }}
 	<br>

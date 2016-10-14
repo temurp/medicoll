@@ -9,6 +9,12 @@ def news_list(request):
 	news_list = News.objects.all()
 	paginator = Paginator(news_list, 3)
 
+	query = request.GET.get('query')
+	if query:
+		news_list = news_list.filter(text__icontains=query)
+		return render_to_response('news/news_list.html', {'news_list': news_list,
+															'query': query})
+
 	page = request.GET.get('page')
 	try:
 		news_list = paginator.page(page)
