@@ -1,16 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One);
 body {
 	background: #fcfcfc;
-	font-family: 'Ubuntu Condensed', sans-serif;
+	font-family: 'Fjalla One', sans-serif;
 	font-size: large;
 }
 
 .wrap {
 	width: 80%;
 	margin: 0 auto;
-}
-
-#hide-slider {
-	display: block;
 }
 
 .logo-top {
@@ -26,6 +23,7 @@ body {
 .language {
 	margin-top: 10%;
 	margin-bottom: 3.7%;
+	float: right;
 }
 
 .language a {
@@ -75,6 +73,7 @@ body {
 
 #search-field {
 	/*margin-top: 17%;*/
+	float: right;
 }
 
 .stylish-input-group .input-group-addon{
@@ -125,6 +124,14 @@ input.form-control:focus {
 /*nav.navbar.navbar-inverse {
 	background-color: #008e42;
 }*/
+.navbar-inverse a.navbar-brand {
+	color: #ddeee4; /*#ddeee4;*/
+	font-size: 16px;
+}
+.navbar-brand:hover {
+	background-color: rgba(255,255,255,0.1) !important;
+}
+
 nav.navbar.navbar-inverse {
 	width: 100%;
 	float: center;
@@ -134,11 +141,12 @@ nav.navbar.navbar-inverse {
 	background-color: #008e42;
 	border:none;
 	margin-bottom: 0%;
+	font-size: 16px;
 }
 
 ul.nav.navbar-nav {
 	display: inline-block;
-  	float: none;
+  	float: right;
   	vertical-align: top;
 }
 /*.navbar .nav {
@@ -158,7 +166,20 @@ ul.nav.navbar-nav {
 }
 
 .navbar-inverse .navbar-nav>li>a.dropdown-toggle {
-	color: white;
+	color: #ddeee4;
+}
+
+ul.dropdown-menu {
+	background-color: #008e42;
+}
+
+ul.dropdown-menu>li>a {
+	color: #ddeee4;
+}
+
+ul.dropdown-menu>li>a:hover, ul.dropdown-menu>li>a:focus {
+	color: #008e42;
+	background-color: #ddeee4;
 }
 
 /*.navbar-inverse .navbar-nav>.open>a.dropdown-toggle {
@@ -178,6 +199,10 @@ ul.nav.navbar-nav {
 .navbar-inverse .navbar-nav>.open>a.dropdown-toggle, .navbar-inverse .navbar-nav>.open>a.dropdown-toggle:focus, .navbar-inverse .navbar-nav>.open>a.dropdown-toggle:hover {
     color: #fff;
     background-color: rgba(255,255,255,0.1);
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	background-color: rgba(255,255,255,0.1) !important;
 }
 /*.dropdown-menu {
 	background-color: #008e42;
@@ -363,10 +388,8 @@ ul.nav.navbar-nav {
 	color: #00b359;
 }
 /*footer*/
- footer {
+ /*footer {
 	background-color: #008e42;
-	/*padding-bottom: 1px;*/
-	/*padding: 1rem;*/
 	position: relative;
     max-height: 25%;
     margin: 0 auto;
@@ -379,11 +402,114 @@ footer li a {
 }
 footer li:hover a{
 	color: #ddd;
-}
+}*/
 /*other*/
 @media screen and (max-width: 600px) {
   #no {
     visibility: hidden;
     display: none;
   }
+}
+
+.full {
+    width: 100%;	
+}
+.gap {
+	height: 30px;
+	width: 100%;
+	clear: both;
+	display: block;
+}
+.footer {
+	/*background: #EDEFF1;*/
+	background: #008e42; /*#ddeee4;*/
+	height: auto;
+	padding-bottom: 20px;
+	position: relative;
+	width: 100%;
+	/*border-bottom: 1px solid #CCCCCC;
+	border-top: 1px solid #DDDDDD;*/
+}
+.footer p {
+	/*margin: 0;*/
+	padding: 0 0 5px 0;
+}
+.footer img {
+	max-width: 100%;
+}
+.footer h3 {
+	border-bottom: 1px solid #ddeee4;/*#BAC1C8*/
+	color: white;/*#54697E*/
+	font-size: 16px;
+	/*font-weight: 600;*/
+	line-height: 27px;
+	padding: 15px 0 10px;
+	text-transform: uppercase;
+}
+.footer ul {
+	font-size: 13px;
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	margin-top: 15px;
+	color: #ddeee4;/*#7F8C8D*/
+}
+.footer ul li a {
+	padding: 0 0 5px 0;
+	display: block;
+}
+.footer a {
+	color: #ddeee4; /*#78828D;*/
+}
+.supportLi h4 {
+	font-size: 20px;
+	font-weight: lighter;
+	line-height: normal;
+	margin-bottom: 0 !important;
+	padding-bottom: 0;
+}
+
+.bg-gray {
+	background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);/*#BBBBBB #F0F0F0*/
+	box-shadow: 0 1px 0 #B4B3B3;
+}
+.social li {
+	background: none repeat scroll 0 0 #ddeee4;/*#ddeee4; #B5B5B5;*/
+	border: 2px solid #008e42;;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+	float: left;
+	height: 36px;
+	line-height: 36px;
+	margin: 0 8px 0 0;
+	padding: 0;
+	text-align: center;
+	width: 36px;
+	transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-webkit-transition: all 0.5s ease 0s;
+	-ms-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+}
+.social li:hover {
+	transform: scale(1.15) rotate(360deg);
+	-webkit-transform: scale(1.1) rotate(360deg);
+	-moz-transform: scale(1.1) rotate(360deg);
+	-ms-transform: scale(1.1) rotate(360deg);
+	-o-transform: scale(1.1) rotate(360deg);
+}
+.social li a {
+	color: white; /*#EDEFF1;*/
+}
+.social li:hover {
+	border: 2px solid white;/*#2c3e50*/
+	background: white;
+}
+.social li a i {
+	font-size: 16px;
+	margin: 0 0 0 5px;
+	color: #008e42 !important;/*#EDEFF1*/
 }

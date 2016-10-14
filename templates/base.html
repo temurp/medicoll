@@ -5,14 +5,16 @@
 	<title>Med college</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="{% static 'css/style2.css' %}">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 	
-	<!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> -->
-	<!-- <script src="{% static 'js/bootstrap.min.js' %}"></script> -->
+	
+	
 </head>
 <body>
 
@@ -64,7 +66,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-      <!-- <a class="navbar-brand" href="#">SHIT</a> -->
+      <a class="navbar-brand" href="#">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</a>
     </div>
 
    <div class="navbar-collapse collapse">
@@ -75,9 +77,10 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">ОБ УНИВЕРСИТЕТЕ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
+          <li><a href="#">История</a></li>
+          <li><a href="#">Фотогалерея</a></li>
+          <li><a href="#">Культурная жизнь</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
       </li>
 	<!-- абитуриенту -->
@@ -85,9 +88,9 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">АБИТУРИЕНТУ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Page 2-1</a></li>
-          <li><a href="#">Page 2-2</a></li>
-          <li><a href="#">Page 2-3</a></li>
+        	<li><a href="#">Наши преимущества</a></li>
+          	<li><a href="#">Список документов</a></li>
+          	<li><a href="#">Цены</a></li>
         </ul>
       </li>
 	<!-- студенту -->
@@ -95,9 +98,9 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">СТУДЕНТУ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Page 3-1</a></li>
-          <li><a href="#">Page 3-2</a></li>
-          <li><a href="#">Page 3-3</a></li>
+          <li><a href="#">Расписание</a></li>
+          <li><a href="#">Библиотека</a></li>
+          <li><a href="#">Акции</a></li>
         </ul>
       </li>
 	<!-- факультеты -->
@@ -105,20 +108,21 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">ФАКУЛЬТЕТЫ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Page 4-1</a></li>
-          <li><a href="#">Page 4-2</a></li>
-          <li><a href="#">Page 4-3</a></li>
+          <li><a href="#">Факультет 1</a></li>
+          <li><a href="#">Факультет 2</a></li>
+          <li><a href="#">Факультет 3</a></li>
+          <li><a href="#">Факультет 4</a></li>
         </ul>
       </li>
     <!-- выпускнику -->
     	<li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ВЫПУСКНИКУ
-        <span class="caret"></span></a>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">НОВОСТИ И СОБЫТИЯ</a>
+        <!-- <span class="caret"></span>
         <ul class="dropdown-menu">
           <li><a href="#">Page 5-1</a></li>
           <li><a href="#">Page 5-2</a></li>
           <li><a href="#">Page 5-3</a></li>
-        </ul>
+        </ul> -->
       </li>
     </ul>
     </div>
@@ -185,7 +189,7 @@
 			{% block content %}
 			{% endblock content %}
 		</div>
-			<div class="col-lg-4"><h3>Меню</h3>
+			<div class="col-lg-4"><h3>Вместо меню - цитаты</h3>
 			<ul>
 				<li><a href="#">Библиотека</a></li>
 				<li><a href="#">Наши контакты</a></li>
@@ -194,7 +198,7 @@
 			</ul>
 
 				<div class="column">
-					<h3 align="center">Обращение ректора</h3>
+					<h3 align="center">Скачайте буклет</h3>
 					<p align="justify">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain
 					</p>
 					<img id="mini" src="{% static 'Images/teach.png' %}">
@@ -207,7 +211,7 @@
            </div>
 
 <!-- footer -->
-<footer>
+<!-- <footer>
 <div class="wrap">
    <div class="row">
      <div class="col-lg-6">
@@ -242,6 +246,48 @@
 
    </div>
 </div>
-</footer>
+</footer> -->
+
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+                    <h3> О нас </h3>
+                    <ul>
+                        <li> <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p> </li>
+                    </ul>
+                    <ul class="social">
+                        <li> <a href="#"> <i class="fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6">
+                    <h3> Навигация </h3>
+                    <ul>
+                        <li> <a href="#"> Домой </a> </li>
+                        <li> <a href="#"> О колледже </a> </li>
+                        <li> <a href="#"> Абитуриенту </a> </li>
+                        <li> <a href="#"> Студенту </a> </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6 ">
+                    <h3> Контакты </h3>
+                    <ul>
+                        <li> <p><strong>Адрес:</strong> ул. Ленина 5 </p></li>
+                        <li> <p><strong>Телефон:</strong> 900 000 454 </p></li>
+                        <p><strong>Email:</strong> <a href="mailto:info@kth.tj">info@kth.tj</a></p>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+
 </body>
 </html>
