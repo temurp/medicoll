@@ -235,9 +235,9 @@ ul.dropdown-menu>li>a:hover, ul.dropdown-menu>li>a:focus {
 }
 .fade-carousel .carousel-indicators > li {
     margin: 0 2px;
-    background-color: #f39c12;
-    border-color: #f39c12;
-    opacity: .7;
+    background-color: #008e42;
+    border-color: #008e42;
+    opacity: .5;
 }
 .fade-carousel .carousel-indicators > li.active {
   width: 10px;
