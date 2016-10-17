@@ -69,12 +69,9 @@ body {
   background-image: url(flags/gb-eng.svg);
 }
 
-
-
 #search-field {
 	/*margin-top: 17%;*/
 	float: right;
-
 }
 
 .stylish-input-group .input-group-addon{
@@ -100,25 +97,25 @@ input.form-control:focus {
 .container1{
 	background-color: #ddeee4;
 }
-.container1 .col-lg-8 {
+/*.container1 .col-lg-8 {
 	height: 36.67%;
 	color: #00b359;
 }
 .container1 .col-lg-2 {
 	height: 36.67%;
 	color: #00b359;
-}
+}*/
 .lang {
 	float: right;
 	margin-top: 40%;
 }
-.container1 .col-lg-2 > span {
+/*.container1 .col-lg-2 > span {
 	float: left;
 }
 
 .container1 .col-lg-8 > h1 {
 	text-align: center; 
-}
+}*/
 
 .glyphicon > .contact {
 	font-family: 'Ubuntu Condensed', sans-serif;
@@ -596,4 +593,8 @@ a.btn.btn-default.btn-lg {
 	color: #333;
 	text-decoration: none;
 	cursor: default;
+}
+
+.teachers-grid {
+	margin-left: 10%;
 }

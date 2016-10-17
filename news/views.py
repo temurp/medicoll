@@ -33,3 +33,6 @@ def news_detail(request, pk):
 
 def about_university(request):
 	return render_to_response('news/about_university.html')
+
+def culture(request):
+	return render_to_response('news/culture.html')

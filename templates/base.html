@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Med college</title>
+	<title>Медицинский колледж района Мирсаид Али Хамадони</title>
 	<link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -78,12 +78,13 @@
     <ul class="nav navbar-nav">
      
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'about_university' %}">ОБ УНИВЕРСИТЕТЕ
+        <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'about_university' %}">О КОЛЛЕДЖЕ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{% url 'about_university' %}#history">История</a></li>
-          <li><a href="{% url 'about_university' %}#photogallery">Фотогалерея</a></li>
-          <li><a href="{% url 'about_university' %}#cultural_life">Культурная жизнь</a></li>
+          <li><a href="{% url 'about_university' %}">История</a></li>
+          <li><a href="{% url 'about_university' %}#teachers">Преподаватели</a></li>
+          <li><a href="{% url 'culture' %}#photogallery">Фотогалерея</a></li>
+          <li><a href="{% url 'culture' %}#cultural_life">Культурная жизнь</a></li>
           <li><a href="{% url 'about_university' %}#contacts">Контакты</a></li>
         </ul>
       </li>
