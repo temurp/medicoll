@@ -514,6 +514,11 @@ a.btn.btn-default.btn-lg {
 .footer a {
 	color: #ddeee4; /*#78828D;*/
 }
+
+.footer a:hover {
+	color: #ddeee4; /*#78828D;*/
+}
+
 .supportLi h4 {
 	font-size: 20px;
 	font-weight: lighter;
@@ -565,4 +570,30 @@ a.btn.btn-default.btn-lg {
 	font-size: 16px;
 	margin: 0 0 0 5px;
 	color: #008e42 !important;/*#EDEFF1*/
+}
+
+.last-news {
+    overflow: hidden;
+    background-color: #ddeee4;
+    color: #333;
+    width: 325px;
+    padding-bottom: 30px;
+}
+
+.last-news a {
+	color: #333;
+}
+
+.last-news a:hover {
+	color: #008e42;
+}
+
+.non-link {
+	color: #333;
+	text-decoration: none;
+}
+.non-link:hover, .non-link:focus, .non-link:active {
+	color: #333;
+	text-decoration: none;
+	cursor: default;
 }

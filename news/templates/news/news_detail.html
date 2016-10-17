@@ -1,13 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>{{ news.title }}</h1>
+<div class="wrap">
+<br>
+	<div class="row">
+		<div class="col-lg-9">
+			<h1>{{ news.title }}</h1>
+			<p>
+				<i>{{ news.creation_date}}</i>
+			</p>
+			
+			<p>
+				{{ news.text|linebreaks }}
+			</p>
+			
+			<a href="{% url 'news_list' %}" style="color: #008e42;">Назад</a>
+		</div>
 
-<p>
-	{{ news.text|linebreaks }}
-</p>
-
-<p>
-	{{ news.creation_date}}
-</p>
-<a href="{% url 'news_list' %}">Назад</a>
+		<div class="col-lg-3 last-news">
+			<h1>Последнее</h1>
+			<hr>
+			<ul>
+			{% for news_title in news_list %}
+				<li><a href="{% url 'news_detail' news_title.id %}">{{ news_title.title }}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
+<br>
+</div>
 {% endblock content %}

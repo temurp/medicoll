@@ -21,5 +21,6 @@ from news import views
 urlpatterns = [
 	url(r'^$', views.news_list, name='news_list'),
 	url(r'news/(?P<pk>\d+)/$', views.news_detail, name='news_detail'),
+    url(r'about/',views.about_university, name='about_university'),
     url(r'^admin/', admin.site.urls),
 ]

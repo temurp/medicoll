@@ -27,4 +27,9 @@ def news_list(request):
 
 def news_detail(request, pk):
 	news = News.objects.get(id=pk)
-	return render_to_response('news/news_detail.html', {'news': news})
+	news_list = News.objects.order_by("-creation_date")[:5]
+	return render_to_response('news/news_detail.html', {'news': news,
+															'news_list': news_list})
+
+def about_university(request):
+	return render_to_response('news/about_university.html')

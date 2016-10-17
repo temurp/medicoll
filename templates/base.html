@@ -77,18 +77,17 @@
    <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
      
-     <!-- об универе -->
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ОБ УНИВЕРСИТЕТЕ
+        <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'about_university' %}">ОБ УНИВЕРСИТЕТЕ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">История</a></li>
-          <li><a href="#">Фотогалерея</a></li>
-          <li><a href="#">Культурная жизнь</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a href="{% url 'about_university' %}#history">История</a></li>
+          <li><a href="{% url 'about_university' %}#photogallery">Фотогалерея</a></li>
+          <li><a href="{% url 'about_university' %}#cultural_life">Культурная жизнь</a></li>
+          <li><a href="{% url 'about_university' %}#contacts">Контакты</a></li>
         </ul>
       </li>
-	<!-- абитуриенту -->
+
      <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">АБИТУРИЕНТУ
         <span class="caret"></span></a>
@@ -98,7 +97,7 @@
           	<li><a href="#">Цены</a></li>
         </ul>
       </li>
-	<!-- студенту -->
+
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">СТУДЕНТУ
         <span class="caret"></span></a>
@@ -108,7 +107,7 @@
           <li><a href="#">Акции</a></li>
         </ul>
       </li>
-	<!-- факультеты -->
+
 		<li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">ФАКУЛЬТЕТЫ
         <span class="caret"></span></a>
@@ -119,7 +118,7 @@
           <li><a href="#">Факультет 4</a></li>
         </ul>
       </li>
-    <!-- выпускнику -->
+
     	<li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">НОВОСТИ И СОБЫТИЯ</a>
         <!-- <span class="caret"></span>
@@ -134,87 +133,8 @@
   </div>
 </nav>
 
-<!-- HERO CAROUSEL -->
-
-
-<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-  <!-- Overlay -->
-  <div class="overlay"></div>
-
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#bs-carousel" data-slide-to="1"></li>
-    <li data-target="#bs-carousel" data-slide-to="2"></li>
-  </ol>
-  
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item slides active">
-      <div class="slide-1"></div>
-      <!-- <div class="hero">
-        <hgroup>
-            <h1>We are creative</h1>        
-            <h3>Get start your next awesome project</h3>
-        </hgroup>
-        <button class="btn btn-hero btn-lg" role="button">See all features</button>
-      </div> -->
-    </div>
-    <div class="item slides">
-      <div class="slide-2"></div>
-    </div>
-    <div class="item slides">
-      <div class="slide-3"></div>
-    </div>
-  </div> 
-</div>
-
-
-
-<div class="wrap">
-
- <!-- grid -->
-	<div class="container2">
-		<div class="row">
-			<div class="col-lg-8">
-				{% block content %}
-				{% endblock content %}
-			</div>
-			<div class="col-lg-4">
-				
-				    <blockquote class="quote-box">
-				    <h3>Цитаты</h3>
-				      <p class="quotation-mark">
-				        “
-				      </p>
-				      <p class="quote-text">
-				        <i>Слепой не видит солнца, даже глядя на небо. Так и для невежды смысл истины скрыт за семью замками.</i>
-				      </p>
-				      <hr class="qt">
-				        <p style="margin-left: 10px;">
-				          Абу Али ибн Сино
-				        </p>
-				    </blockquote>
-
-				<div class="dwnl-doc">
-					<div class="dwnl-text text-center">
-						<h3>Скачайте буклет о нашем колледже</h3>
-						<br>
-						<p>
-					         В нем вы найдете всю необходимую информацию
-					    </p>
-					    <br>
-					    <a type="button" class="btn btn-default btn-lg" href="#">
-							<span class="glyphicon glyphicon-download-alt"></span> Скачать буклет 
-					    </a>
-
-				    </div>
-				</div>
-
-			</div>
-		</div>
-	</div>	
-</div>
+{% block content %}
+{% endblock content %}
 
 <footer>
     <div class="footer" id="footer">

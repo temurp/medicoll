@@ -2,13 +2,53 @@
 {% block content %}
 
 
-<h1>Новости</h1>
+<!-- HERO CAROUSEL -->
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item slides active">
+      <div class="slide-1"></div>
+      <!-- <div class="hero">
+        <hgroup>
+            <h1>We are creative</h1>        
+            <h3>Get start your next awesome project</h3>
+        </hgroup>
+        <button class="btn btn-hero btn-lg" role="button">See all features</button>
+      </div> -->
+    </div>
+    <div class="item slides">
+      <div class="slide-2"></div>
+    </div>
+    <div class="item slides">
+      <div class="slide-3"></div>
+    </div>
+  </div> 
+</div>
+
+
+<div class="wrap">
+
+ <!-- grid -->
+	<div class="container2">
+		<div class="row">
+			<div class="col-lg-8">
+				<h1>Новости</h1>
 
 {% for news in news_list %}
-<h3><a href="{% url 'news_detail' news.id %}" style="color: #333;" name="exactline">{{ news.title }}</a></h3>
+<h3><a href="{% url 'news_detail' news.id %}" style="color: #333;">{{ news.title }}</a></h3>
 <p>
 	{{ news.text|truncatewords:33 }}
-	<br>
+	
 	<a href="{% url 'news_detail' news.id %}" style="color: #008e42;">Читать далее</a>
 </p>
 <p><i>{{ news.creation_date }}</i></p>
@@ -31,6 +71,42 @@
 		{% endif %}
 
 		<br><span style="margin-left: 43%;">{{ news_list.number }} из {{ news_list.paginator.num_pages }}</span>
+</div>
+			</div>
+			<div class="col-lg-4">
+				
+				    <blockquote class="quote-box">
+				    <h3>Цитаты</h3>
+				      <p class="quotation-mark">
+				        “
+				      </p>
+				      <p class="quote-text">
+				        <i>Слепой не видит солнца, даже глядя на небо. Так и для невежды смысл истины скрыт за семью замками.</i>
+				      </p>
+				      <hr class="qt">
+				        <p style="margin-left: 10px;">
+				          Абу Али ибн Сино
+				        </p>
+				    </blockquote>
+
+				<div class="dwnl-doc">
+					<div class="dwnl-text text-center">
+						<h3>Скачайте буклет о нашем колледже</h3>
+						<br>
+						<p>
+					         В нем вы найдете всю необходимую информацию
+					    </p>
+					    <br>
+					    <a type="button" class="btn btn-default btn-lg" href="#">
+							<span class="glyphicon glyphicon-download-alt"></span> Скачать буклет 
+					    </a>
+
+				    </div>
+				</div>
+
+			</div>
+		</div>
+	</div>	
 </div>
 
 {% endblock content %}
