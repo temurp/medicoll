@@ -93,9 +93,9 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">АБИТУРИЕНТУ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-        	<li><a href="#">Наши преимущества</a></li>
-          	<li><a href="#">Список документов</a></li>
-          	<li><a href="#">Цены</a></li>
+        	<li><a href="{% url 'enrollee' %}#rules">Правила приёма абитуриентов</a></li>
+          	<li><a href="{% url 'enrollee' %}#listofdocs">Список документов</a></li>
+          	<li><a href="{% url 'enrollee' %}#price">Цены</a></li>
         </ul>
       </li>
 
@@ -103,9 +103,10 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">СТУДЕНТУ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Расписание</a></li>
-          <li><a href="#">Библиотека</a></li>
-          <li><a href="#">Акции</a></li>
+        	<li><a href="#">Личный кабинет</a></li>
+          	<li><a href="#">Расписание</a></li>
+          	<li><a href="#">Библиотека</a></li>
+          	<li><a href="#">Акции</a></li>
         </ul>
       </li>
 

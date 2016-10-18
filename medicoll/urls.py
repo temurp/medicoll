@@ -23,5 +23,6 @@ urlpatterns = [
 	url(r'news/(?P<pk>\d+)/$', views.news_detail, name='news_detail'),
     url(r'about/',views.about_university, name='about_university'),
     url(r'culture/',views.culture, name='culture'),
+    url(r'enrollee/',views.enrollee, name='enrollee'),
     url(r'^admin/', admin.site.urls),
 ]

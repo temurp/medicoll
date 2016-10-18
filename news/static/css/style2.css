@@ -10,6 +10,11 @@ body {
 	margin: 0 auto;
 }
 
+.wrap2 {
+	width: 87%;
+	margin: 0 auto;
+}
+
 .logo-top {
 	margin-top: 0.5%;
 	margin-bottom: 0.5%;
@@ -597,4 +602,8 @@ a.btn.btn-default.btn-lg {
 
 .teachers-grid {
 	margin-left: 10%;
+}
+
+.my-table {
+	font-size: 18px;
 }

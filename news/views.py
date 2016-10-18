@@ -36,3 +36,6 @@ def about_university(request):
 
 def culture(request):
 	return render_to_response('news/culture.html')
+
+def enrollee(request):
+	return render_to_response('news/enrollee.html')
