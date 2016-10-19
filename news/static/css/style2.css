@@ -130,7 +130,7 @@ input.form-control:focus {
 	background-color: #008e42;
 }*/
 .navbar-inverse a.navbar-brand {
-	color: #ddeee4; /*#ddeee4;*/
+	color: white; /*#ddeee4;*/
 	font-size: 16px;
 }
 .navbar-brand:hover {
@@ -479,7 +479,7 @@ a.btn.btn-default.btn-lg {
 	/*background: #EDEFF1;*/
 	background: #008e42; /*#ddeee4;*/
 	height: auto;
-	padding-bottom: 20px;
+	padding-bottom: 0px;
 	position: relative;
 	width: 100%;
 	/*border-bottom: 1px solid #CCCCCC;

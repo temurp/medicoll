@@ -85,7 +85,7 @@
           <li><a href="{% url 'about_university' %}#teachers">Преподаватели</a></li>
           <li><a href="{% url 'culture' %}#photogallery">Фотогалерея</a></li>
           <li><a href="{% url 'culture' %}#cultural_life">Культурная жизнь</a></li>
-          <li><a href="{% url 'about_university' %}#contacts">Контакты</a></li>
+          <!-- <li><a href="{% url 'about_university' %}#contacts">Контакты</a></li> -->
         </ul>
       </li>
 
@@ -99,7 +99,7 @@
         </ul>
       </li>
 
-      <li class="dropdown">
+      <!-- <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">СТУДЕНТУ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
@@ -108,27 +108,25 @@
           	<li><a href="#">Библиотека</a></li>
           	<li><a href="#">Акции</a></li>
         </ul>
-      </li>
+      </li> -->
 
 		<li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">ФАКУЛЬТЕТЫ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Факультет 1</a></li>
-          <li><a href="#">Факультет 2</a></li>
-          <li><a href="#">Факультет 3</a></li>
-          <li><a href="#">Факультет 4</a></li>
+          <li><a href="{% url 'faculties' %}#faculty1">Факультет 1</a></li>
+          <li><a href="{% url 'faculties' %}#faculty2">Факультет 2</a></li>
+          <li><a href="{% url 'faculties' %}#faculty3">Факультет 3</a></li>
+          <li><a href="{% url 'faculties' %}#faculty4">Факультет 4</a></li>
         </ul>
       </li>
 
     	<li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">НОВОСТИ И СОБЫТИЯ</a>
-        <!-- <span class="caret"></span>
-        <ul class="dropdown-menu">
-          <li><a href="#">Page 5-1</a></li>
-          <li><a href="#">Page 5-2</a></li>
-          <li><a href="#">Page 5-3</a></li>
-        </ul> -->
+        <a class="dropdown-toggle" href="#">НОВОСТИ И СОБЫТИЯ</a>
+      </li>
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" href="{% url 'about_university' %}#contacts">КОНТАКТЫ</a>
       </li>
     </ul>
     </div>
@@ -145,7 +143,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                     <h3> О нас </h3>
                     <ul>
-                        <li> <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. </p> </li>
+                        <li> {% lorem 1 p %} </li>
                     </ul>
                     <ul class="social">
                         <li> <a href="#"> <i class="fa fa-facebook">   </i> </a> </li>
@@ -154,13 +152,14 @@
                         <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
                         <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
                     </ul>
+                    <!-- <br><br><p style="color: #ddeee4;">© 2016 Медицинский колледж Хамадони</p> -->
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6">
                     <h3> Навигация </h3>
                     <ul>
-                        <li> <a href="#"> Домой </a> </li>
-                        <li> <a href="#"> О колледже </a> </li>
-                        <li> <a href="#"> Абитуриенту </a> </li>
+                        <li> <a href="{% url 'news_list' %}"> Домой </a> </li>
+                        <li> <a href="{% url 'about_university' %}"> О колледже </a> </li>
+                        <li> <a href="{% url 'enrollee' %}"> Абитуриенту </a> </li>
                         <li> <a href="#"> Студенту </a> </li>
                     </ul>
                 </div>
@@ -174,7 +173,13 @@
                     </ul>
                 </div>
             </div>
-            <!--/.row--> 
+            <!--/.row-->
+            <div class="row">
+            	<div class="col-lg-12">
+            	<br>
+            		<p class="text-center" style="color: #ddeee4;">© 2016 Медицинский колледж Хамадони</p>
+            	</div>
+            </div>
         </div>
         <!--/.container--> 
     </div>

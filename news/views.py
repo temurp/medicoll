@@ -39,3 +39,6 @@ def culture(request):
 
 def enrollee(request):
 	return render_to_response('news/enrollee.html')
+
+def faculties(request):
+	return render_to_response('news/faculties.html')
