@@ -39,10 +39,10 @@
 <div class="wrap">
 
  <!-- grid -->
-	<div class="container2">
+	<div class="container">
 		<div class="row">
 			<div class="col-lg-8">
-				<h1>Новости</h1>
+				<h1>Последние новости</h1>
 
 {% for news in news_list %}
 <h3><a href="{% url 'news_detail' news.id %}" style="color: #333;">{{ news.title }}</a></h3>
@@ -55,7 +55,7 @@
 <hr>
 {% endfor %}
 
-<div class="pagination">
+<!-- <div class="pagination">
 		{% if news_list.has_previous %}
 		<ul class="pager">
 			<li class="previous"><a href="?page={{ news_list.previous_page_number }}" style="color: #008e42;">Предыдущая</a></li>
@@ -71,7 +71,7 @@
 		{% endif %}
 
 		<br><span style="margin-left: 43%;">{{ news_list.number }} из {{ news_list.paginator.num_pages }}</span>
-</div>
+</div> -->
 			</div>
 			<div class="col-lg-4">
 				

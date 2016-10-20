@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'culture/',views.culture, name='culture'),
     url(r'applicants/',views.enrollee, name='enrollee'),
     url(r'faculties/',views.faculties, name='faculties'),
+    url(r'all-news/',views.all_news, name='news_and_events'),
     url(r'^admin/', admin.site.urls),
 ]

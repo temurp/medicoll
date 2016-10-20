@@ -541,7 +541,7 @@ a.btn.btn-default.btn-lg {
     overflow: hidden;
     background-color: #ddeee4;
     color: #333;
-    width: 325px;
+    width: 300px;
     padding-bottom: 30px;
 }
 
@@ -569,4 +569,12 @@ a.btn.btn-default.btn-lg {
 
 .my-table {
 	font-size: 18px;
+}
+
+.gray-back {
+	background-color: #f1f1f1;
+}
+
+.affix-bottom {
+  position: absolute;
 }
