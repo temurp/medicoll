@@ -578,3 +578,18 @@ a.btn.btn-default.btn-lg {
 .affix-bottom {
   position: absolute;
 }
+
+.my-btn {
+	background-color: #008e42;
+	color: #ddeee4;
+}
+
+.btn.my-btn {
+	border-radius: 0px;
+	font-size: 16px;
+}
+
+.btn.my-btn:hover {
+	color: #ddeee4;
+	border-color: #ddeee4;
+}
