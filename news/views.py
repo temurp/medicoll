@@ -43,6 +43,9 @@ def enrollee(request):
 def faculties(request):
 	return render_to_response('news/faculties.html')
 
+def contacts(request):
+	return render_to_response('news/contacts.html')
+
 def all_news(request):
 	news_list1 = News.objects.all()
 	paginator = Paginator(news_list1, 5)
