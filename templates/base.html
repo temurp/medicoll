@@ -6,6 +6,7 @@
 	<link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="{% static 'css/style2.css' %}">
 	<!-- activate and configure non-responsive.css to make site irresponsible-->
@@ -79,7 +80,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-      <a class="navbar-brand" href="#">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</a>
+      <a class="navbar-brand" href="http://10.230.10.72:85">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</a>
     </div>
 
    <div class="navbar-collapse collapse">
@@ -91,6 +92,7 @@
         <ul class="dropdown-menu">
           <li><a href="{% url 'about_university' %}">История</a></li>
           <li><a href="{% url 'about_university' %}#teachers">Преподаватели</a></li>
+          <li><a href="{% url 'about_university' %}#labs">Лаборатории</a></li>
           <li><a href="{% url 'culture' %}#photogallery">Фотогалерея</a></li>
           <li><a href="{% url 'culture' %}#cultural_life">Культурная жизнь</a></li>
           <!-- <li><a href="{% url 'about_university' %}#contacts">Контакты</a></li> -->
@@ -103,7 +105,8 @@
         <ul class="dropdown-menu">
         	<li><a href="{% url 'enrollee' %}#rules">Правила приёма абитуриентов</a></li>
           	<li><a href="{% url 'enrollee' %}#listofdocs">Список документов</a></li>
-          	<li><a href="{% url 'enrollee' %}#price">Цены</a></li>
+          	<li><a href="{% url 'enrollee' %}#price">Набор</a></li>
+            <li><a href="{% url 'enrollee' %}#camp">Общежитие</a></li>
         </ul>
       </li>
 

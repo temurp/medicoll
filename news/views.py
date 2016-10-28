@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# from .models import News, Image, InlineImage, PictureAdmin
 from .models import News
 from django.shortcuts import render_to_response
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -35,6 +36,8 @@ def about_university(request):
 	return render_to_response('news/about_university.html')
 
 def culture(request):
+	# image_list = Image.objects.all()
+	# return render_to_response('news/culture.html', {'image_list': image_list})
 	return render_to_response('news/culture.html')
 
 def enrollee(request):
@@ -48,6 +51,7 @@ def contacts(request):
 
 def all_news(request):
 	news_list1 = News.objects.all()
+	# first_news = News.objects.order_by("-creation_date")[1:]
 	paginator = Paginator(news_list1, 5)
 
 	# query1 = request.GET.get('query')
