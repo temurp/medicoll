@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
-# from django.contrib import admin
+from django.contrib import admin
+from medicoll import settings
 
 
 class News(models.Model):
@@ -16,6 +17,16 @@ class News(models.Model):
 
 	def __str__(self):
 		return u'{} {}'.format(self.title, self.creation_date)
+
+class Image(models.Model):
+	news_id = models.ForeignKey(News)
+	news_image = models.ImageField(u'Изображение', upload_to='images/')
+
+class InlineImage(admin.TabularInline):
+	model = Image
+
+class PictureAdmin(admin.ModelAdmin):
+    inlines = [InlineImage]
 
 # class Image(models.Model):
 # 	newss = models.ForeignKey(News)

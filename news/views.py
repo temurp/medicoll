@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # from .models import News, Image, InlineImage, PictureAdmin
-from .models import News
+from .models import News, Image
 from django.shortcuts import render_to_response
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
@@ -28,9 +28,10 @@ def news_list(request):
 
 def news_detail(request, pk):
 	news = News.objects.get(id=pk)
+	image = Image.objects.get(news_id=pk)
 	news_list = News.objects.order_by("-creation_date")[:5]
 	return render_to_response('news/news_detail.html', {'news': news,
-															'news_list': news_list})
+															'news_list': news_list, 'image': image})
 
 def about_university(request):
 	return render_to_response('news/about_university.html')

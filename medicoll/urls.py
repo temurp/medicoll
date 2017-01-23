@@ -14,9 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from django.conf.urls.static import static
 from django.contrib import admin
 
 from news import views
+from medicoll import settings
 
 urlpatterns = [
 	url(r'^$', views.news_list, name='news_list'),
@@ -27,5 +29,6 @@ urlpatterns = [
     url(r'faculties/',views.faculties, name='faculties'),
     url(r'all-news/',views.all_news, name='news_and_events'),
     url(r'contacts/',views.contacts, name='contacts'),
+    #url(r'^uploads/(?P<path>.*)$','django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     url(r'^admin/', admin.site.urls),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
