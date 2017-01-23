@@ -169,11 +169,11 @@ ul.dropdown-menu>li>a:hover, ul.dropdown-menu>li>a:focus {
 	background-color: rgba(255,255,255,0.1) !important;
 }
 
-@media(max-width: 767px) {
+/*@media(max-width: 767px) {
 	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
 		color: white;
 	}
-}
+}*/
 
 /********************************/
 /*       Fade Bs-carousel       */
@@ -374,12 +374,12 @@ a.btn.btn-default.btn-lg {
 }
 
 /*other*/
-@media screen and (max-width: 600px) {
+/*@media screen and (max-width: 600px) {
   #no {
     visibility: hidden;
     display: none;
   }
-}
+}*/
 
 
 .last-news {

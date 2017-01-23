@@ -71,6 +71,7 @@
 
 
 <!-- navbar -->
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -95,7 +96,68 @@
           <li><a href="{% url 'about_university' %}#labs">Лаборатории</a></li>
           <li><a href="{% url 'culture' %}#photogallery">Фотогалерея</a></li>
           <li><a href="{% url 'culture' %}#cultural_life">Культурная жизнь</a></li>
-          <!-- <li><a href="{% url 'about_university' %}#contacts">Контакты</a></li> -->
+        </ul>
+      </li>
+
+     <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">АБИТУРИЕНТУ
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'enrollee' %}#rules">Правила приёма абитуриентов</a></li>
+            <li><a href="{% url 'enrollee' %}#listofdocs">Список документов</a></li>
+            <li><a href="{% url 'enrollee' %}#price">Набор</a></li>
+            <li><a href="{% url 'enrollee' %}#camp">Общежитие</a></li>
+        </ul>
+      </li>
+
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ФАКУЛЬТЕТЫ
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'faculties' %}#faculty1">Факультет 1</a></li>
+          <li><a href="{% url 'faculties' %}#faculty2">Факультет 2</a></li>
+          <li><a href="{% url 'faculties' %}#faculty3">Факультет 3</a></li>
+          <li><a href="{% url 'faculties' %}#faculty4">Факультет 4</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" href="{% url 'news_and_events' %}">НОВОСТИ И СОБЫТИЯ</a>
+      </li>
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" href="{% url 'contacts' %}">КОНТАКТЫ</a>
+      </li>
+    </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <a class="navbar-brand" href="http://10.230.10.72:85">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</a>
+    </div>
+
+   <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+     
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'about_university' %}">О КОЛЛЕДЖЕ
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'about_university' %}">История</a></li>
+          <li><a href="{% url 'about_university' %}#teachers">Преподаватели</a></li>
+          <li><a href="{% url 'about_university' %}#labs">Лаборатории</a></li>
+          <li><a href="{% url 'culture' %}#photogallery">Фотогалерея</a></li>
+          <li><a href="{% url 'culture' %}#cultural_life">Культурная жизнь</a></li>
         </ul>
       </li>
 
@@ -109,17 +171,6 @@
             <li><a href="{% url 'enrollee' %}#camp">Общежитие</a></li>
         </ul>
       </li>
-
-      <!-- <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">СТУДЕНТУ
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-        	<li><a href="#">Личный кабинет</a></li>
-          	<li><a href="#">Расписание</a></li>
-          	<li><a href="#">Библиотека</a></li>
-          	<li><a href="#">Акции</a></li>
-        </ul>
-      </li> -->
 
 		<li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">ФАКУЛЬТЕТЫ
@@ -143,7 +194,7 @@
     </div>
   </div>
 </nav>
-
+ -->
 {% block content %}
 {% endblock content %}
 
