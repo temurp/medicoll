@@ -3,18 +3,16 @@
 from .models import News, Image
 from django.shortcuts import render_to_response
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
+import random
 
 def news_list(request):
-
-	news_list = News.objects.order_by("-creation_date")[:3]
 	# paginator = Paginator(news_list, 3)
 
-	query = request.GET.get('query')
-	if query:
-		news_list = news_list.filter(text__icontains=query)
-		return render_to_response('news/news_list.html', {'news_list': news_list,
-															'query': query})
+	# query = request.GET.get('query')
+	# if query:
+	# 	news_list = news_list.filter(text__icontains=query)
+	# 	return render_to_response('news/news_list.html', {'news_list': news_list,
+	# 														'query': query})
 
 	# page = request.GET.get('page')
 	# try:
@@ -23,8 +21,16 @@ def news_list(request):
 	# 	news_list = paginator.page(1)
 	# except EmptyPage:
 	# 	news_list = paginator.page(paginator.num_pages)
-
-	return render_to_response('news/news_list.html', {'news_list': news_list})
+	news_list = News.objects.order_by("-creation_date")[:3]
+	quotes = {'Эмомали Рахмон': 'Врач не имеет морального права ошибаться, поскольку в его руках судьба человека.',
+	'Абу Али ибн Сино': 'Нет безнадежных больных. Есть только безнадежные врачи',
+	'Шекспир': 'Здоровье — дороже золота',
+	'Андреас Везалий': 'Наука о строении человеческого тела является самой достойной для человека областью знаний и заслуживает чрезвычайного одобрения',
+	'Конфуций': 'Польза от имеющихся знаний в их применении',
+	'П.А. Герцен': '...хирург не имеет права браться за нож, не зная анатомии, возможных физиологических осложнений и их причин',
+	'Г. Ратнер': 'Физиология - наука, способная объяснить человеку, чем занимаются его внутренние органы, пока он живет'}
+	author, quote = random.choice(list(quotes.items()))
+	return render_to_response('news/news_list.html', {'news_list': news_list, 'author': author, 'quote': quote})
 
 def news_detail(request, pk):
 	news = News.objects.get(id=pk)

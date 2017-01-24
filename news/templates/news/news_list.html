@@ -13,14 +13,14 @@
     <li data-target="#bs-carousel" data-slide-to="1"></li>
     <li data-target="#bs-carousel" data-slide-to="2"></li>
   </ol>
-  
+
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item slides active">
       <div class="slide-1"></div>
       <!-- <div class="hero">
         <hgroup>
-            <h1>We are creative</h1>        
+            <h1>We are creative</h1>
             <h3>Get start your next awesome project</h3>
         </hgroup>
         <button class="btn btn-hero btn-lg" role="button">See all features</button>
@@ -32,7 +32,7 @@
     <div class="item slides">
       <div class="slide-3"></div>
     </div>
-  </div> 
+  </div>
 </div>
 
 
@@ -48,7 +48,7 @@
 <h3><a href="{% url 'news_detail' news.id %}" style="color: #333;">{{ news.title }}</a></h3>
 <p>
 	{{ news.text|truncatewords:20 }}
-	
+
 	<a href="{% url 'news_detail' news.id %}" style="color: #008e42;">Читать далее</a>
 </p>
 <p><i>{{ news.creation_date }}</i></p>
@@ -62,7 +62,7 @@
 		{% else %}
 			<li class="previous disabled"><a href="" style="color: #008e42;">Предыдущая</a></li>
 		{% endif %}
-		
+
 		{% if news_list.has_next %}
 			<li class="next"><a href="?page={{ news_list.next_page_number }}" style="color: #008e42;">Следующая</a></li>
 		{% else %}
@@ -74,18 +74,18 @@
 </div> -->
 			</div>
 			<div class="col-lg-4">
-				
+
 				    <blockquote class="quote-box">
 				    <h3>Цитаты</h3>
 				      <p class="quotation-mark">
 				        “
 				      </p>
 				      <p class="quote-text">
-				        <i>Слепой не видит солнца, даже глядя на небо. Так и для невежды смысл истины скрыт за семью замками.</i>
+				        <i>{{ quote }}</i>
 				      </p>
 				      <hr class="qt">
 				        <p style="margin-left: 10px;">
-				          Абу Али ибн Сино
+				          {{author}}
 				        </p>
 				    </blockquote>
 
@@ -98,7 +98,7 @@
 					    </p>
 					    <br>
 					    <a type="button" class="btn btn-default btn-lg" href="#">
-							<span class="glyphicon glyphicon-download-alt"></span> Скачать буклет 
+							<span class="glyphicon glyphicon-download-alt"></span> Скачать буклет
 					    </a>
 
 				    </div>
@@ -106,7 +106,7 @@
 
 			</div>
 		</div>
-	</div>	
+	</div>
 </div>
 <br>
 {% endblock content %}
