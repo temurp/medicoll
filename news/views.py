@@ -3,6 +3,7 @@
 from .models import News, Image
 from django.shortcuts import render_to_response
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.utils.translation import ugettext as _
 import random
 
 def news_list(request):

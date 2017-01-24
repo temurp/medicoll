@@ -29,6 +29,5 @@ urlpatterns = [
     url(r'faculties/',views.faculties, name='faculties'),
     url(r'all-news/',views.all_news, name='news_and_events'),
     url(r'contacts/',views.contacts, name='contacts'),
-    #url(r'^uploads/(?P<path>.*)$','django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     url(r'^admin/', admin.site.urls),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
