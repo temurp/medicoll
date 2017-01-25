@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "basetj.html" %}
 {% block content %}
 <div class="wrap">
 <br>
@@ -14,15 +14,15 @@
 				{{ news.text|linebreaks }}
 			</p>
 
-			<a href="{% url 'news_and_events_ru' %}" style="color: #008e42;">Назад</a>
+			<a href="{% url 'news_and_events' %}" style="color: #008e42;">Ба пеш</a>
 		</div>
 
 		<div class="col-lg-3 last-news">
-			<h1>Последнее</h1>
+			<h1>Охирин</h1>
 			<hr>
 			<ul>
 			{% for news_title in news_list %}
-				<li><a href="{% url 'news_detail_ru' news_title.id %}">{{ news_title.title }}</a></li>
+				<li><a href="{% url 'news_detail' news_title.id %}">{{ news_title.title }}</a></li>
 			{% endfor %}
 			</ul>
 		</div>

@@ -45,16 +45,16 @@
 				<h1>Последние новости</h1>
 
 {% for news in news_list %}
-<h3><a href="{% url 'news_detail' news.id %}" style="color: #333;">{{ news.title }}</a></h3>
+<h3><a href="{% url 'news_detail_ru' news.id %}" style="color: #333;">{{ news.title }}</a></h3>
 <p>
 	{{ news.text|truncatewords:20 }}
 
-	<a href="{% url 'news_detail' news.id %}" style="color: #008e42;">Читать далее</a>
+	<a href="{% url 'news_detail_ru' news.id %}" style="color: #008e42;">Читать далее</a>
 </p>
 <p><i>{{ news.creation_date }}</i></p>
 <hr>
 {% endfor %}
-<a href="{% url 'news_and_events' %}" class="btn my-btn" role="button">Все новости</a>
+<a href="{% url 'news_and_events_ru' %}" class="btn my-btn" role="button">Все новости</a>
 <!-- <div class="pagination">
 		{% if news_list.has_previous %}
 		<ul class="pager">

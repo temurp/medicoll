@@ -1,0 +1,60 @@
+{% extends "basetj.html" %}
+{% block content %}
+
+<div class="container">
+<br>
+<h1 class="text-center">Хабарҳо ва рӯйдодҳо</h1>
+<br>
+	<div class="row">
+		<div class="col-lg-9">
+			{% for news in all_news %}
+			<h3><a href="{% url 'news_detail' news.id %}" style="color: #333;">{{ news.title }}</a></h3>
+			<p>
+				{{ news.text|truncatewords:33 }}
+
+				<a href="{% url 'news_detail' news.id %}" style="color: #008e42;">Читать далее</a>
+			</p>
+			<p><i>{{ news.creation_date }}</i></p>
+			<hr>
+			{% endfor %}
+
+
+			<div class="pagination">
+					{% if all_news.has_previous %}
+					<ul class="pager">
+						<li class="previous"><a href="?page={{ all_news.previous_page_number }}" style="color: #008e42;">гузашта</a></li>
+					{% else %}
+						<li class="previous disabled"><a href="" style="color: #008e42;">гузашта</a></li>
+					{% endif %}
+
+					{% if all_news.has_next %}
+						<li class="next"><a href="?page={{ all_news.next_page_number }}" style="color: #008e42;">оянда</a></li>
+					{% else %}
+						<li class="next disabled"><a href="" style="color: #008e42;">оянда</a></li>
+					</ul>
+					{% endif %}
+
+					<br><span style="margin-left: 43%;">{{ all_news.number }} аз {{ all_news.paginator.num_pages }}</span>
+			</div>
+		</div>
+		<br>
+		<div class="col-lg-3">
+			<div class="last-news" data-spy="affix" data-offset-bottom="300" data-offset-top="200">
+				<div style="margin-left: 15px;">
+					<h2>Мунтахаб</h2>
+					<hr style="border-top: 2px solid #008e42; width: 55%; float: left; margin-top: 0px; margin-bottom: 0px;"><br>
+					<h4>Кушодани коллеҷ</h4>
+					<img class="img-responsive" src="http://placehold.it/250x90" alt=""><br>
+					<p>Дар 21.03.14 коллеҷи мо кушода шуд. Ин руз яке аз рузхои бузургтарини таърихи маорифи Тоҷикистон мебошад.<a href="{% url 'about_university' %}#history" style="color: #008e42;">Читать далее</a></p>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+{% endblock content %}

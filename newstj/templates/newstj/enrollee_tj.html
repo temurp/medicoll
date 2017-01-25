@@ -1,0 +1,101 @@
+{% extends "basetj.html" %}
+{% block content %}
+<br>
+<a href="#" name="rules" class="non-link text-center"><h1>Низомномаи дохилшавӣ довталабон</h1></a>
+<br><br>
+<div class="wrap2">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4">
+			<h3 class="text-center">Ҳуҷҷатҳоро ҷамъ кунед. Рӯйхати ҳуҷҷатҳо дар <a href="{% url 'enrollee' %}#listofdocs">поён</a> дода мешавад.</h3>
+		</div>
+		<div class="col-lg-4">
+			<h3 class="text-center">Ирсол ҳуҷҷатҳои худро <a href="{% url 'about_university' %}#contacts">ба коллеҷ</a> ё тамос бо декан.</h3>
+		</div>
+		<div class="col-lg-4">
+			<h3 class="text-center">Задани <a href="{% url 'enrollee' %}#price">хазинадор</a> таҳсил коллеҷ. Манфиатҳои имконпазир.</h3>
+		</div>
+	</div>
+</div>
+</div>
+<br><br>
+<div class="gray-back">
+<hr>
+<a href="#" name="listofdocs" class="non-link text-center"><h1>Рӯйхати ҳуҷҷатҳо</h1></a>
+<br><br>
+<div class="container">
+ <div class="col-lg-10">
+	<ul style="font-size: 18px;">
+		<li><p><strong>Нусхаи шиноснома</strong> - нусхаи варақаҳои саҳифаи якум ва бақайдгирии</p></li>
+		<li><p><strong>Исботи истиқомат</strong> - Исбот аз иттиҳодияи манзил</p></li>
+		<li><p><strong>Шањодатнома</strong> - сертификати аслии тањсилоти њатмии</p></li>
+		<li><p><strong>Кӯмак аз беморхона</strong> - №1 кӯмак аз клиника дар ҷои истиқомат</p></li>
+		<li><p><strong>Хулоса</strong> - њуљљати дорои маълумоти умумӣ, дар якҷоягӣ бо таҷриба ва малакаи</p></li>
+		<li><p><strong>Мактуби њавасмандї</strong> - чаро шумо мехоҳед, ки ба коллеҷи мазкур мо</p></li>
+		<li><p><strong>Тавсияҳо</strong> - номаҳои муаррифӣ аз муаллимон</p></li>
+	</ul>
+</div>
+</div>
+<br>
+<hr>
+</div>
+<a href="#" name="price" class="non-link text-center"><h1>Факултаҳо</h1></a>
+<h3 class="text-center">Ин маљмўи довталабон ба факултаҳои зерин амалӣ</h3>
+<br><br>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			<a href="{% url 'faculties' %}#faculty1"><img class="img-responsive center-block" src="http://placehold.it/150x150" alt=""></a>
+			<hr style="border-top: 3px solid #008e42; width: 10%; margin-top: 12px; margin-bottom: 12px;">
+			<p class="text-center">Шуъбаи рузона</p>
+            <p class="text-center">Шартномави ва буҷави</p>
+		</div>
+		<div class="col-lg-3">
+			<a href="{% url 'faculties' %}#faculty2"><img class="img-responsive center-block" src="http://placehold.it/150x150" alt=""></a>
+			<hr style="border-top: 3px solid #008e42; width: 10%; margin-top: 12px; margin-bottom: 12px;">
+			<p class="text-center">Шуъбаи рузона ва ғоибона</p>
+            <p class="text-center">Шартномави ва буҷави</p>
+		</div>
+		<div class="col-lg-3">
+			<a href="{% url 'faculties' %}#faculty3"><img class="img-responsive center-block" src="http://placehold.it/150x150" alt=""></a>
+			<hr style="border-top: 3px solid #008e42; width: 10%; margin-top: 12px; margin-bottom: 12px;">
+			<p class="text-center">Шуъбаи рузона ва ғоибона</p>
+            <p class="text-center">Шартномави</p>
+		</div>
+		<div class="col-lg-3">
+			<a href="{% url 'faculties' %}#faculty1"><img class="img-responsive center-block" src="http://placehold.it/150x150" alt=""></a>
+			<hr style="border-top: 3px solid #008e42; width: 10%; margin-top: 12px; margin-bottom: 12px;">
+			<p class="text-center">Шуъбаи рузона ва ғоибона</p>
+            <p class="text-center">Шартномави ва буҷави</p>
+		</div>
+	</div>
+</div>
+<div class="gray-back">
+<hr>
+<a href="#" name="camp" class="non-link text-center"><h1>Хобгоҳ</h1></a>
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			{% lorem 2 p %}
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-lg-3">
+			<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+		</div>
+		<div class="col-lg-3">
+			<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+		</div>
+		<div class="col-lg-3">
+			<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+		</div>
+		<div class="col-lg-3">
+			<img class="img-responsive" src="http://placehold.it/400x300" alt="">
+		</div>
+	</div>
+</div>
+<br><br>
+</div>
+{% endblock content %}

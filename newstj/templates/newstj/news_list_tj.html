@@ -1,0 +1,89 @@
+{% extends "basetj.html" %}
+{% block content %}
+
+
+<!-- HERO CAROUSEL -->
+<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item slides active">
+      <div class="slide-1"></div>
+    </div>
+    <div class="item slides">
+      <div class="slide-2"></div>
+    </div>
+    <div class="item slides">
+      <div class="slide-3"></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrap">
+
+ <!-- grid -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<h1>Хабарҳо</h1>
+
+{% for news in news_list %}
+<h3><a href="{% url 'news_detail' news.id %}" style="color: #333;">{{ news.title }}</a></h3>
+<p>
+	{{ news.text|truncatewords:20 }}
+
+	<a href="{% url 'news_detail' news.id %}" style="color: #008e42;">Давомаш</a>
+</p>
+<p><i>{{ news.creation_date }}</i></p>
+<hr>
+{% endfor %}
+<a href="{% url 'news_and_events' %}" class="btn my-btn" role="button">Ҳамаи хабарҳо</a>
+
+			</div>
+			<div class="col-lg-4">
+
+				    <blockquote class="quote-box">
+				    <h3>Иқтибосҳо</h3>
+				      <p class="quotation-mark">
+				        “
+				      </p>
+				      <p class="quote-text">
+				        <i>{{ quote }}</i>
+				      </p>
+				      <hr class="qt">
+				        <p style="margin-left: 10px;">
+				          {{author}}
+				        </p>
+				    </blockquote>
+
+				<div class="dwnl-doc">
+					<div class="dwnl-text text-center">
+						<h3>Дарёфт китобча дар бораи коллеҷи мо</h3>
+						<br>
+						<p>
+					         Дар он шумо тамоми маълумоти заруриро меёбед
+					    </p>
+					    <br>
+					    <a type="button" class="btn btn-default btn-lg" href="#">
+							<span class="glyphicon glyphicon-download-alt"></span> Дарёфт китобча
+					    </a>
+
+				    </div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+{% endblock content %}

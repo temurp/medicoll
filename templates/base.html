@@ -27,7 +27,7 @@
  		<div class="row">
 
  			<div class="col-lg-2 logo-top">
- 					<a  href="{% url 'news_list' %}" id="logo"><img src="{% static 'Images/logo6.png' %}"></a>
+ 					<a  href="{% url 'news_list_ru' %}" id="logo"><img src="{% static 'Images/logo6.png' %}"></a>
  			</div>
 
 			<div class="col-lg-6 college-name">
@@ -37,10 +37,10 @@
 			<div class="col-lg-4">
 				<div class="language">
 					<span class="flag-icon flag-icon-tj"></span>
-					<a href="#">ТОҶИКӢ</a>
+					<a href="{% url 'news_list' %}">ТОҶИКӢ</a>
 					<span style="font-size: 1.3em; color: #008e42;">/</span>
 					<span class="flag-icon flag-icon-ru"></span>
-					<a href="#">РУССКИЙ</a>
+					<a href="{% url 'news_list_ru' %}">РУССКИЙ</a>
 				</div>
 
 				<!-- <div id="search-field">
@@ -78,14 +78,14 @@
     <ul class="nav navbar-nav">
 
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'about_university' %}">О КОЛЛЕДЖЕ
+        <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'about_university_ru' %}">О КОЛЛЕДЖЕ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{% url 'about_university' %}">История</a></li>
-          <li><a href="{% url 'about_university' %}#teachers">Преподаватели</a></li>
-          <li><a href="{% url 'about_university' %}#labs">Лаборатории</a></li>
-          <li><a href="{% url 'culture' %}#photogallery">Фотогалерея</a></li>
-          <li><a href="{% url 'culture' %}#cultural_life">Культурная жизнь</a></li>
+          <li><a href="{% url 'about_university_ru' %}">История</a></li>
+          <li><a href="{% url 'about_university_ru' %}#teachers">Преподаватели</a></li>
+          <li><a href="{% url 'about_university_ru' %}#labs">Лаборатории</a></li>
+          <li><a href="{% url 'culture_ru' %}#photogallery">Фотогалерея</a></li>
+          <li><a href="{% url 'culture_ru' %}#cultural_life">Культурная жизнь</a></li>
         </ul>
       </li>
 
@@ -93,10 +93,10 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">АБИТУРИЕНТУ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{% url 'enrollee' %}#rules">Правила приёма абитуриентов</a></li>
-            <li><a href="{% url 'enrollee' %}#listofdocs">Список документов</a></li>
-            <li><a href="{% url 'enrollee' %}#price">Набор</a></li>
-            <li><a href="{% url 'enrollee' %}#camp">Общежитие</a></li>
+          <li><a href="{% url 'enrollee_ru' %}#rules">Правила приёма абитуриентов</a></li>
+            <li><a href="{% url 'enrollee_ru' %}#listofdocs">Список документов</a></li>
+            <li><a href="{% url 'enrollee_ru' %}#price">Набор</a></li>
+            <li><a href="{% url 'enrollee_ru' %}#camp">Общежитие</a></li>
         </ul>
       </li>
 
@@ -104,19 +104,19 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">ФАКУЛЬТЕТЫ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{% url 'faculties' %}#faculty1">Факультет 1</a></li>
-          <li><a href="{% url 'faculties' %}#faculty2">Факультет 2</a></li>
-          <li><a href="{% url 'faculties' %}#faculty3">Факультет 3</a></li>
-          <li><a href="{% url 'faculties' %}#faculty4">Факультет 4</a></li>
+          <li><a href="{% url 'faculties_ru' %}#faculty1">Факультет 1</a></li>
+          <li><a href="{% url 'faculties_ru' %}#faculty2">Факультет 2</a></li>
+          <li><a href="{% url 'faculties_ru' %}#faculty3">Факультет 3</a></li>
+          <li><a href="{% url 'faculties_ru' %}#faculty4">Факультет 4</a></li>
         </ul>
       </li>
 
       <li class="dropdown">
-        <a class="dropdown-toggle" href="{% url 'news_and_events' %}">НОВОСТИ И СОБЫТИЯ</a>
+        <a class="dropdown-toggle" href="{% url 'news_and_events_ru' %}">НОВОСТИ И СОБЫТИЯ</a>
       </li>
 
       <li class="dropdown">
-        <a class="dropdown-toggle" href="{% url 'contacts' %}">КОНТАКТЫ</a>
+        <a class="dropdown-toggle" href="{% url 'contacts_ru' %}">КОНТАКТЫ</a>
       </li>
     </ul>
     </div>
@@ -209,9 +209,9 @@
                 <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6">
                     <h3> Навигация </h3>
                     <ul>
-                        <li> <a href="{% url 'news_list' %}"> Домой </a> </li>
-                        <li> <a href="{% url 'about_university' %}"> О колледже </a> </li>
-                        <li> <a href="{% url 'enrollee' %}"> Абитуриенту </a> </li>
+                        <li> <a href="{% url 'news_list_ru' %}"> Домой </a> </li>
+                        <li> <a href="{% url 'about_university_ru' %}"> О колледже </a> </li>
+                        <li> <a href="{% url 'enrollee_ru' %}"> Абитуриенту </a> </li>
                         <li> <a href="#"> Студенту </a> </li>
                     </ul>
                 </div>

@@ -8,11 +8,11 @@
 	<div class="row">
 		<div class="col-lg-9">
 			{% for news in all_news %}
-			<h3><a href="{% url 'news_detail' news.id %}" style="color: #333;">{{ news.title }}</a></h3>
+			<h3><a href="{% url 'news_detail_ru' news.id %}" style="color: #333;">{{ news.title }}</a></h3>
 			<p>
 				{{ news.text|truncatewords:33 }}
-				
-				<a href="{% url 'news_detail' news.id %}" style="color: #008e42;">Читать далее</a>
+
+				<a href="{% url 'news_detail_ru' news.id %}" style="color: #008e42;">Читать далее</a>
 			</p>
 			<p><i>{{ news.creation_date }}</i></p>
 			<hr>
@@ -26,7 +26,7 @@
 					{% else %}
 						<li class="previous disabled"><a href="" style="color: #008e42;">Предыдущая</a></li>
 					{% endif %}
-					
+
 					{% if all_news.has_next %}
 						<li class="next"><a href="?page={{ all_news.next_page_number }}" style="color: #008e42;">Следующая</a></li>
 					{% else %}
@@ -45,7 +45,7 @@
 					<hr style="border-top: 2px solid #008e42; width: 55%; float: left; margin-top: 0px; margin-bottom: 0px;"><br>
 					<h4>Открытие колледжа</h4>
 					<img class="img-responsive" src="http://placehold.it/250x90" alt=""><br>
-					<p>Слепой не видит солнца, даже глядя на небо. Так и для невежды смысл истины скрыт за семью замками... <a href="{% url 'about_university' %}#history" style="color: #008e42;">Читать далее</a></p>
+					<p>Слепой не видит солнца, даже глядя на небо. Так и для невежды смысл истины скрыт за семью замками... <a href="{% url 'about_university_ru' %}#history" style="color: #008e42;">Читать далее</a></p>
 					<!-- <ul>
 						{% for news in all_news %}
 							<li><a href="{% url 'news_detail' news.id %}">{{ news.title }}</a></li>
@@ -58,7 +58,7 @@
 	</div>
 </div>
 
-		
+
 
 
 {% endblock content %}

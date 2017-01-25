@@ -1,0 +1,162 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Коллеҷи тиббии ноҳияи Мир Сайид Алии Ҳамадонӣ</title>
+	<link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/style2.css' %}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<body>
+
+<div class="container1">
+ 	<div class="wrap">
+ 		<div class="row">
+
+ 			<div class="col-lg-2 logo-top">
+ 					<a  href="{% url 'news_list' %}" id="logo"><img src="{% static 'Images/logo6.png' %}"></a>
+ 			</div>
+
+			<div class="col-lg-6 college-name">
+				<h3>КОЛЛЕҶИ ТИББИИ <br> НОҲИЯИ МИР САЙИД АЛИИ ҲАМАДОНӢ</h3>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="language">
+					<span class="flag-icon flag-icon-tj"></span>
+					<a href="{% url 'news_list' %}">ТОҶИКӢ</a>
+					<span style="font-size: 1.3em; color: #008e42;">/</span>
+					<span class="flag-icon flag-icon-ru"></span>
+					<a href="{% url 'news_list_ru' %}">РУССКИЙ</a>
+				</div>
+
+			</div>
+
+ 			</div>
+ 	</div>
+ </div>
+
+
+<!-- navbar -->
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+      <a class="navbar-brand" href="http://10.230.10.72:85">ВУРУД БА ҲИСОБИ ШУМО</a>
+    </div>
+
+   <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'about_university' %}">ДАР БОРАИ КОЛЛЕҶ
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'about_university' %}">Таърих</a></li>
+          <li><a href="{% url 'about_university' %}#teachers">Мауллимҳо</a></li>
+          <li><a href="{% url 'about_university' %}#labs">Лабораторияҳо</a></li>
+          <li><a href="{% url 'culture' %}#photogallery">Фотогалерея</a></li>
+          <li><a href="{% url 'culture' %}#cultural_life">Ҳаётӣ фарҳангӣ</a></li>
+        </ul>
+      </li>
+
+     <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">БА ДОВТАЛАБ
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'enrollee' %}#rules">Низомномаи дохилшавӣ довталабон</a></li>
+            <li><a href="{% url 'enrollee' %}#listofdocs">Рӯйхати ҳуҷҷатҳо</a></li>
+            <li><a href="{% url 'enrollee' %}#price">Таъин</a></li>
+            <li><a href="{% url 'enrollee' %}#camp">Хобгоҳ</a></li>
+        </ul>
+      </li>
+
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ФАКУЛТАҲО
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'faculties' %}#faculty1">Факултаи 1</a></li>
+          <li><a href="{% url 'faculties' %}#faculty2">Факултаи 2</a></li>
+          <li><a href="{% url 'faculties' %}#faculty3">Факултаи 3</a></li>
+          <li><a href="{% url 'faculties' %}#faculty4">Факултаи 4</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" href="{% url 'news_and_events' %}">ХАБАРҲО ВА РӮЙДОДҲО</a>
+      </li>
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" href="{% url 'contacts' %}">ТАМОС</a>
+      </li>
+    </ul>
+    </div>
+  </div>
+</nav>
+
+{% block content %}
+{% endblock content %}
+
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
+                    <h3> Дар бораи мо </h3>
+                    <ul>
+                        <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </li>
+                    </ul>
+                    <ul class="social">
+                        <li> <a href="#"> <i class="fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6">
+                    <h3> Новбар </h3>
+                    <ul>
+                        <li> <a href="{% url 'news_list' %}"> Ба хона </a> </li>
+                        <li> <a href="{% url 'about_university' %}"> Дар бораи коллеҷ </a> </li>
+                        <li> <a href="{% url 'enrollee' %}"> Ба довталаб </a> </li>
+                        <li> <a href="#"> Студенту </a> </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6 ">
+                    <h3> Тамос </h3>
+                    <ul>
+                        <li> <p><strong>Суроға:</strong> куч. Ленин 5 </p></li>
+                        <li> <p><strong>Телефон:</strong> 900 000 454 </p></li>
+                        <p><strong>Email:</strong> <a href="mailto:info@kth.tj">info@kth.tj</a></p>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row-->
+            <div class="row">
+            	<div class="col-lg-12">
+            	<br>
+            		<p class="text-center" style="color: #ddeee4;">© 2016 Коллеҷи тиббии Ҳамадони</p>
+            	</div>
+            </div>
+        </div>
+        <!--/.container-->
+    </div>
+
+</body>
+</html>
