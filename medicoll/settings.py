@@ -11,21 +11,22 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from medicoll import secret
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = secret.BASE_DIR
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'm*5**2d61dh8%d!0fescj+hqwy0gg@vtqu+bf-x9o4hd_=q@37'
+SECRET_KEY = secret.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = secret.DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = secret.ALLOWED_HOSTS
 
 
 # Application definition
@@ -75,12 +76,7 @@ WSGI_APPLICATION = 'medicoll.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+DATABASES = secret.DATABASES
 
 
 # Password validation

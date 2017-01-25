@@ -18,13 +18,6 @@
   <div class="carousel-inner">
     <div class="item slides active">
       <div class="slide-1"></div>
-      <!-- <div class="hero">
-        <hgroup>
-            <h1>We are creative</h1>
-            <h3>Get start your next awesome project</h3>
-        </hgroup>
-        <button class="btn btn-hero btn-lg" role="button">See all features</button>
-      </div> -->
     </div>
     <div class="item slides">
       <div class="slide-2"></div>
@@ -55,23 +48,6 @@
 <hr>
 {% endfor %}
 <a href="{% url 'news_and_events_ru' %}" class="btn my-btn" role="button">Все новости</a>
-<!-- <div class="pagination">
-		{% if news_list.has_previous %}
-		<ul class="pager">
-			<li class="previous"><a href="?page={{ news_list.previous_page_number }}" style="color: #008e42;">Предыдущая</a></li>
-		{% else %}
-			<li class="previous disabled"><a href="" style="color: #008e42;">Предыдущая</a></li>
-		{% endif %}
-
-		{% if news_list.has_next %}
-			<li class="next"><a href="?page={{ news_list.next_page_number }}" style="color: #008e42;">Следующая</a></li>
-		{% else %}
-			<li class="next disabled"><a href="" style="color: #008e42;">Следующая</a></li>
-		</ul>
-		{% endif %}
-
-		<br><span style="margin-left: 43%;">{{ news_list.number }} из {{ news_list.paginator.num_pages }}</span>
-</div> -->
 			</div>
 			<div class="col-lg-4">
 

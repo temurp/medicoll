@@ -27,13 +27,3 @@ class InlineImage(admin.TabularInline):
 
 class PictureAdmin(admin.ModelAdmin):
     inlines = [InlineImage]
-
-# class Image(models.Model):
-# 	newss = models.ForeignKey(News)
-# 	image = models.ImageField(u'Картинка')
-
-# class InlineImage(admin.TabularInline):
-#     model = Image
-
-# class PictureAdmin(admin.ModelAdmin):
-#     inlines = [InlineImage]
