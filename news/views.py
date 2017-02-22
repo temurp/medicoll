@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 
-from .models import News, Image
+from .models import News, Image, SliderImage
 from django.shortcuts import render_to_response
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import random
 
 def news_list(request):
 	news_list = News.objects.order_by("-creation_date")[:3]
+	img = SliderImage.objects.order_by("-date_of_adding")[:3]
+	img1, img2, img3 = img
+	# slider_num = ['slide-1','slide-2','slide-3']
+	# image_with_num = zip	(slider_num,img)
 	quotes = {'Эмомали Рахмон': 'Врач не имеет морального права ошибаться, поскольку в его руках судьба человека.',
 	'Абу Али ибн Сино': 'Нет безнадежных больных. Есть только безнадежные врачи.',
 	'Шекспир': 'Здоровье — дороже золота.',
@@ -15,7 +19,8 @@ def news_list(request):
 	'П.А. Герцен': '...хирург не имеет права браться за нож, не зная анатомии, возможных физиологических осложнений и их причин.',
 	'Г. Ратнер': 'Физиология - наука, способная объяснить человеку, чем занимаются его внутренние органы, пока он живет.'}
 	author, quote = random.choice(list(quotes.items()))
-	return render_to_response('news/news_list.html', {'news_list': news_list, 'author': author, 'quote': quote})
+	return render_to_response('news/news_list.html', {'news_list': news_list, 'author': author, 'quote': quote,
+	'img1': img1, 'img2': img2, 'img3': img3})
 
 def news_detail(request, pk):
 	news = News.objects.get(id=pk)
