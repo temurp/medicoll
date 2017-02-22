@@ -5,12 +5,3 @@ requests (2.12.5)
 setuptools (33.1.1)
 six (1.10.0)
 wheel (0.30.0a0)
-
-
-{% for sld_num, slider_picture in image_with_num %}
-  <div class="item slides active">
-    <div class="{{ sld_num }}">
-      <img src="{{ slider_picture.slider_image.url }}" />
-    </div>
-  </div>
-{% endfor %}
