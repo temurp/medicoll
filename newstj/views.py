@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 # Tajik version
-from .models import Newstj, Imagetj
+from .models import Newstj, Imagetj, SliderImagetj
 from django.shortcuts import render_to_response
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import random
 
 def news_list(request):
 	news_list = Newstj.objects.order_by("-creation_date")[:3]
+	img = SliderImagetj.objects.order_by("-date_of_adding")[:3]
+	img1, img2, img3 = img
 	quotes = {'Эмомалӣ Раҳмон': 'Духтур ҳуқуқи маънавии хато кардан надорад, зеро дар дасти ӯ ҳаёти шахс мебошад.',
 	'Абӯали ибни Сино': 'Нест беморони ноумед. Танҳо духтурони ноумед хастанд.',
 	'Шекспир': 'Саломати аз тилло бештар аст',
@@ -15,7 +17,8 @@ def news_list(request):
 	'П.А. Гертсен': '... Дар Ҷарроҳи ҳақ дорад, то ба корд, ба анатомия ва ањвол физиологии имконпазир ва сабабҳои онҳо намедонист, дорад.',
 	'Г. Ратнер': 'Физиология - илм, ки метавонад ба шахсе, ки чӣ узвҳои дохилӣ худро баён, дар ҳоле, ки ӯ зиндагӣ мекунад.'}
 	author, quote = random.choice(list(quotes.items()))
-	return render_to_response('newstj/news_list_tj.html', {'news_list': news_list, 'author': author, 'quote': quote})
+	return render_to_response('newstj/news_list_tj.html', {'news_list': news_list, 'author': author, 'quote': quote,
+	'img1': img1, 'img2': img2, 'img3': img3})
 
 def news_detail(request, pk):
 	news = Newstj.objects.get(id=pk)
