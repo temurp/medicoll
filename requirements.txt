@@ -1,7 +1,12 @@
-Django (1.10.5)
-Pillow (4.0.0)
-pip (9.0.1)
-requests (2.12.5)
-setuptools (33.1.1)
-six (1.10.0)
-wheel (0.30.0a0)
+Django==1.10.5
+django-filer==1.2.6
+django-hvad==1.7.0
+django-libs==1.67.11
+django-mptt==0.8.7
+django-polymorphic==1.0.2
+easy-thumbnails==2.3
+olefile==0.44
+Pillow==4.0.0
+requests==2.12.5
+six==1.10.0
+Unidecode==0.4.20
