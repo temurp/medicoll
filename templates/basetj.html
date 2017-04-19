@@ -55,7 +55,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-      <a class="navbar-brand" href="http://10.230.10.72:85">ВУРУД БА ҲИСОБИ ШУМО</a>
+      <a class="navbar-brand" href="http://10.230.10.72:85">ВУРУД БА УТОҚИ ШАХСИ</a>
     </div>
 
    <div class="navbar-collapse collapse">
@@ -66,8 +66,8 @@
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="{% url 'about_university' %}">Таърих</a></li>
-          <li><a href="{% url 'about_university' %}#teachers">Мауллимҳо</a></li>
-          <li><a href="{% url 'about_university' %}#labs">Лабораторияҳо</a></li>
+          <li><a href="{% url 'about_university' %}#teachers">Муаллимҳо</a></li>
+          <!-- <li><a href="{% url 'about_university' %}#labs">Лабораторияҳо</a></li> -->
           <li><a href="{% url 'culture' %}#photogallery">Фотогалерея</a></li>
           <li><a href="{% url 'culture' %}#cultural_life">Ҳаётӣ фарҳангӣ</a></li>
         </ul>
@@ -77,21 +77,22 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">БА ДОВТАЛАБ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{% url 'enrollee' %}#rules">Низомномаи дохилшавӣ довталабон</a></li>
-            <li><a href="{% url 'enrollee' %}#listofdocs">Рӯйхати ҳуҷҷатҳо</a></li>
-            <li><a href="{% url 'enrollee' %}#price">Таъин</a></li>
+          <li><a href="{% url 'enrollee' %}#speech">Муроҷиат</a></li>
+            <li><a href="{% url 'enrollee' %}#listofdocs">Номгӯи ҳуҷҷатҳои қабулшуда</a></li>
+            <li><a href="{% url 'enrollee' %}#faculties">Номгӯи шӯъбаҳо</a></li>
             <li><a href="{% url 'enrollee' %}#camp">Хобгоҳ</a></li>
         </ul>
       </li>
 
     <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ФАКУЛТАҲО
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ШӮЪБАҲО
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{% url 'faculties' %}#faculty1">Факултаи 1</a></li>
-          <li><a href="{% url 'faculties' %}#faculty2">Факултаи 2</a></li>
-          <li><a href="{% url 'faculties' %}#faculty3">Факултаи 3</a></li>
-          <li><a href="{% url 'faculties' %}#faculty4">Факултаи 4</a></li>
+          <li><a href="{% url 'faculties' %}#faculty1">Кори момодоягӣ</a></li>
+          <li><a href="{% url 'faculties' %}#faculty2">Кори ҳамширагӣ</a></li>
+					<li><a href="{% url 'faculties' %}#faculty2">Кори ҳамширагӣ пас аз хатми синфи 9</a></li>
+          <li><a href="{% url 'faculties' %}#faculty3">Кори фарматсевтӣ</a></li>
+          <!-- <li><a href="{% url 'faculties' %}#faculty4">Факултаи 4</a></li> -->
         </ul>
       </li>
 
@@ -117,7 +118,11 @@
                 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                     <h3> Дар бораи мо </h3>
                     <ul>
-                        <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </li>
+                        <li> Муассиса мутобиқи Иҷозатнома оид ба ҳуқуқи пешбурди фаъолияти таътимӣ аз 28.06.2014 №8
+												силсилаи ВТҲИА №0000006, №24 ва Шаходатнома дар бораи
+												аккредитатсияи давлатӣ силсилаи №6310009035 аз 17.04.2014, ки аз тарафи Вазорати тандурустӣ
+												ва ҳифзи иҷтимоии аҳолии Ҷумхурии Тоҷикистон якчоя
+												бо вазорати маориф ва илми Ҷумҳурии Тоҷикистон дода шудааст, фаъолият менамояд. </li>
                     </ul>
                     <ul class="social">
                         <li> <a href="#"> <i class="fa fa-facebook">   </i> </a> </li>
@@ -133,16 +138,16 @@
                         <li> <a href="{% url 'news_list' %}"> Ба хона </a> </li>
                         <li> <a href="{% url 'about_university' %}"> Дар бораи коллеҷ </a> </li>
                         <li> <a href="{% url 'enrollee' %}"> Ба довталаб </a> </li>
-                        <li> <a href="#"> Студенту </a> </li>
+                        <li> <a href="{% url 'news_and_events' %}"> Хабарҳо </a> </li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6 ">
                     <h3> Тамос </h3>
                     <ul>
-                        <li> <p><strong>Суроға:</strong> куч. Ленин 5 </p></li>
-                        <li> <p><strong>Телефон:</strong> 900 000 454 </p></li>
-                        <p><strong>Email:</strong> <a href="mailto:info@kth.tj">admin@kth.tj</a></p>
+                        <li> <p><strong>Суроға:</strong> ноҳияи Мир Сайид Алии Ҳамадонӣ ш. Москва, кӯч. И. Сомонӣ 27 </p></li>
+                        <li> <p><strong>Телефон:</strong> +992 90 718 1930,  +992 918 73 7412,  833 15 22422 </p></li>
+                        <p><strong>Email:</strong> <a href="mailto:info@kth.tj">info.hamadoni@gmail.com</a></p>
                     </ul>
                 </div>
             </div>
@@ -150,7 +155,7 @@
             <div class="row">
             	<div class="col-lg-12">
             	<br>
-            		<p class="text-center" style="color: #ddeee4;">© 2016 Коллеҷи тиббии Ҳамадони</p>
+            		<p class="text-center" style="color: #ddeee4;">© 2017 Муассисаи таълимии ғайридавлатии “Коллеҷи тиббии ноҳияи Мир Сайид Алии Ҳамадони”</p>
             	</div>
             </div>
         </div>
