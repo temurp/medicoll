@@ -12,6 +12,7 @@
 	<!-- <link rel="stylesheet" href="{% static 'css/non-responsive.css' %}"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/modal.js' %}"></script>
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
 	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
@@ -69,7 +70,7 @@
         <ul class="dropdown-menu">
           <li><a href="{% url 'about_university_ru' %}">История</a></li>
           <li><a href="{% url 'about_university_ru' %}#teachers">Преподаватели</a></li>
-          <li><a href="{% url 'about_university_ru' %}#labs">Лаборатории</a></li>
+          <!-- <li><a href="{% url 'about_university_ru' %}#labs">Лаборатории</a></li> -->
           <li><a href="{% url 'culture_ru' %}#photogallery">Фотогалерея</a></li>
           <li><a href="{% url 'culture_ru' %}#cultural_life">Культурная жизнь</a></li>
         </ul>
@@ -79,10 +80,10 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">АБИТУРИЕНТУ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{% url 'enrollee_ru' %}#rules">Правила приёма абитуриентов</a></li>
+          <li><a href="{% url 'enrollee_ru' %}#speech">Обращение к абитуриентам</a></li>
             <li><a href="{% url 'enrollee_ru' %}#listofdocs">Список документов</a></li>
-            <li><a href="{% url 'enrollee_ru' %}#price">Набор</a></li>
-            <li><a href="{% url 'enrollee_ru' %}#camp">Общежитие</a></li>
+            <li><a href="{% url 'enrollee_ru' %}#faculties">Список факультетов</a></li>
+            <!-- <li><a href="{% url 'enrollee_ru' %}#camp">Общежитие</a></li> -->
         </ul>
       </li>
 
@@ -90,10 +91,10 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">ФАКУЛЬТЕТЫ
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{% url 'faculties_ru' %}#faculty1">Факультет 1</a></li>
-          <li><a href="{% url 'faculties_ru' %}#faculty2">Факультет 2</a></li>
-          <li><a href="{% url 'faculties_ru' %}#faculty3">Факультет 3</a></li>
-          <li><a href="{% url 'faculties_ru' %}#faculty4">Факультет 4</a></li>
+          <li><a href="{% url 'faculties_ru' %}#faculty1">Акушерское дело</a></li>
+          <li><a href="{% url 'faculties_ru' %}#faculty2">Сестринское дело</a></li>
+          <li><a href="{% url 'faculties_ru' %}#faculty2">Сестринское дело по окончании 9-го класса</a></li>
+          <li><a href="{% url 'faculties_ru' %}#faculty3">Фармацевтическое дело</a></li>
         </ul>
       </li>
 
@@ -119,7 +120,10 @@
                 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
                     <h3> О нас </h3>
                     <ul>
-                        <li> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. </li>
+                        <li> Учреждено в соответствии с лицензией, связанной с осуществлением деятельности от 28.06.2014 № 8
+													МЗиСЗ №0000006, №24 и свидетельством о государственной аккредитации серии №6310009035 от 17.04.2014,
+													выданными Министерством здравоохранения и социальной защиты населения Республики Таджикистан совместно с
+													Министерством образования и науки Республики Таджикистан. </li>
                     </ul>
                     <ul class="social">
                         <li> <a href="#"> <i class="fa fa-facebook">   </i> </a> </li>
@@ -136,16 +140,16 @@
                         <li> <a href="{% url 'news_list_ru' %}"> Домой </a> </li>
                         <li> <a href="{% url 'about_university_ru' %}"> О колледже </a> </li>
                         <li> <a href="{% url 'enrollee_ru' %}"> Абитуриенту </a> </li>
-                        <li> <a href="#"> Студенту </a> </li>
+												<li> <a href="{% url 'news_and_events_ru' %}"> Новости </a> </li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6 ">
                     <h3> Контакты </h3>
                     <ul>
-                        <li> <p><strong>Адрес:</strong> ул. Ленина 5 </p></li>
-                        <li> <p><strong>Телефон:</strong> 900 000 454 </p></li>
-                        <p><strong>Email:</strong> <a href="mailto:info@kth.tj">info@kth.tj</a></p>
+                        <li> <p><strong>Адрес:</strong> район Мир Сайид Алии Ҳамадонӣ г. Москва, ул. И. Сомони 27 </p></li>
+                        <li> <p><strong>Телефон:</strong> +992 90 718 1930,  +992 918 73 7412,  833 15 22422 </p></li>
+                        <p><strong>Email:</strong> <a href="mailto:info@kth.tj">info.hamadoni@gmail.com</a></p>
                     </ul>
                 </div>
             </div>
@@ -153,7 +157,7 @@
             <div class="row">
             	<div class="col-lg-12">
             	<br>
-            		<p class="text-center" style="color: #ddeee4;">© 2016 Медицинский колледж Хамадони</p>
+            		<p class="text-center" style="color: #ddeee4;">© 2017 Негосударственное образовательное учреждение “Медицинский колледж района Мир Сайид Алии Ҳамадони”</p>
             	</div>
             </div>
         </div>
